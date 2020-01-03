@@ -1,0 +1,35 @@
+//project vars
+$path-font: './fonts';
+$path-img: './images';
+
+$roboto: "Roboto", sans-serif;
+$quicksand: "Quicksand", sans-serif;
+
+$white: #fff;
+$dark: #383838;
+$brand-primary: #205374;
+$brand-success: #02BC29;
+$brand-info: #f00;
+$brand-warning: #f00;
+$brand-danger: #f00;
+
+//bs vars
+$border-radius-small: 20px;
+$border-radius-base: 70px;
+$border-radius-large: 100px;
+
+$navbar-border-radius: 0;
+$navbar-margin-bottom: 0;
+
+$input-height-base: 70px;
+$input-color: $dark;
+
+//main
+$grid-breakpoints: (
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1440px,
+    xxl: 1920px
+);

@@ -1,0 +1,31 @@
+@mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value, $important: false) {
+  @if (map-has-key($grid-breakpoints, $min-screen)) {
+    $min-screen: map-get($grid-breakpoints, $min-screen)
+  }
+
+  @if (map-has-key($grid-breakpoints, $max-screen)) {
+    $max-screen: map-get($grid-breakpoints, $max-screen)
+  }
+
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+
+    @media screen and (min-width: $min-screen) {
+      @each $property in $properties {
+        #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value, $important);
+      }
+    }
+
+    @media screen and (min-width: $max-screen) {
+      @each $property in $properties {
+        @if ($important == true) {
+          #{$property} : #{$max-value} #{' !important'};
+        } @else {
+          #{$property}: $max-value;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+*{
+  outline: none !important;
+}
+
+html {
+  @include interpolate(font-size, sm, xxl, 14px, 16px);
+}
+
+body {
+  font-family: $roboto;
+  background: $white;
+  color: $dark;
+  line-height: 1.2;
+}

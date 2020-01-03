@@ -1,0 +1,12 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$icon-location: unicode(ea04);
+
+.icon-location::before {
+  content: $icon-location;
+}

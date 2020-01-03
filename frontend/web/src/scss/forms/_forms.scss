@@ -1,0 +1,112 @@
+.form {
+  &-title{
+    @include interpolate(font-size, sm, xxl, 32px, 50px);
+    color: $white;
+    font-family: $quicksand;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-group {
+    width: 100%;
+
+    &--horizontal {
+      form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .form-item {
+          width: 100%;
+          margin: 0;
+          position: relative;
+
+          &:after{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-right: 1px solid #ccc;
+          }
+
+          &:not(.has-success){
+            select{
+              color: #999;
+            }
+          }
+
+          .select2-selection__arrow {
+            display: none;
+          }
+
+          .form-control,
+          .select2-container--krajee .select2-selection {
+            margin: 0;
+            border-radius: 0;
+
+            & ~ .help-block {
+              margin: 0;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              font-size: 12px;
+              padding-top: 2px;
+              padding-bottom: 6px;
+              @include interpolate(padding-left, sm, xxl, 14px, 30px);
+              pointer-events: none;
+              user-select: none;
+              white-space: nowrap;
+            }
+          }
+
+          &:first-of-type {
+            &:after{
+              display: none;
+            }
+
+            .form-control,
+            .select2-container--krajee .select2-selection {
+              border-top-left-radius: $input-border-radius;
+              border-bottom-left-radius: $input-border-radius;
+            }
+          }
+
+          &:last-of-type {
+            .form-control,
+            .select2-container--krajee .select2-selection {
+              border-top-right-radius: $input-border-radius;
+              border-bottom-right-radius: $input-border-radius;
+              @include interpolate(padding-right, sm, xxl, 142px, 215px);
+            }
+
+            .select2-container--krajee{
+              padding-right: 4px;
+            }
+          }
+        }
+
+        .btn[type="submit"] {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          z-index: 2;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}

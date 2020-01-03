@@ -1,0 +1,52 @@
+{
+  "name": "test-rony",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/env"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp --production",
+    "start": "gulp --development"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "gulp-browserify": "^0.5.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "bootstrap-sass": "^3.4.1",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.4.1"
+  }
+}

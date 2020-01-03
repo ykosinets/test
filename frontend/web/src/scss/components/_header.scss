@@ -1,0 +1,23 @@
+.page-header {
+  background: $brand-primary;
+  color: $white;
+  margin: 0;
+
+  .navbar {
+    &-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-brand{
+      width: auto;
+      display: block;
+    }
+
+    &-collapse{
+
+    }
+  }
+}

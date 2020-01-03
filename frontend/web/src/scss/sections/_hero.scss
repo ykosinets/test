@@ -1,0 +1,20 @@
+.hero {
+  height: auto;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  @include interpolate(height, sm, xxl, 320px, 620px);
+
+  &:after {
+    content: '';
+    @extend .fs;
+    background: #002E6D;
+    opacity: .15;
+    z-index: 2;
+  }
+
+  .form-wrapper {
+    @extend .fs;
+    z-index: 3;
+  }
+}

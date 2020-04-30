@@ -47,6 +47,6 @@
     "gulp-imagemin": "^6.2.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-util": "^3.0.8",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
